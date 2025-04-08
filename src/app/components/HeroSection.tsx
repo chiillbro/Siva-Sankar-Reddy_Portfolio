@@ -29,7 +29,7 @@ export default function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative h-screen flex items-center justify-center text-center overflow-hidden bg-gradient-to-b from-[#0F172A] via-[#1E293B] to-[#0F172A]"
+      className="relative min-h-screen max-sm:pt-26 pb-6 flex items-center justify-center text-center overflow-hidden bg-gradient-to-b from-[#0F172A] via-[#1E293B] to-[#0F172A]"
     >
       {/* Gradient Background Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
@@ -37,7 +37,7 @@ export default function HeroSection() {
       {/* Animated Grid Pattern Overlay */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,_#80808012_1px,transparent_1px),linear-gradient(to_bottom,_#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
 
-      <div className="relative max-w-6xl px-4 max-sm:pt-20">
+      <div className="relative max-w-6xl px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

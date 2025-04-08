@@ -71,9 +71,9 @@ const ContactSection = () => {
   return (
     <section 
       id="contact" 
-      className="min-h-screen relative py-20 px-4 sm:px-6 bg-gradient-to-b from-[#0F172A] to-[#1E293B]"
+      className="min-h-screen py-20 px-4 sm:px-6 bg-gradient-to-b from-[#0F172A] to-[#1E293B]"
     >
-      <div className="max-w-6xl mx-auto w-full">
+      <div className="max-w-6xl mx-auto w-full overflow-x-hidden">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -171,8 +171,8 @@ const ContactSection = () => {
               className="hidden"
             />
 
-            <div className="space-y-6">
-              <div>
+            <div className="space-y-6 w-full">
+              <div className="max-w-[calc(100vw-2rem)] w-full">
                 <label className="text-sm font-medium text-gray-300 mb-2 block">
                   Full Name
                 </label>
@@ -181,7 +181,7 @@ const ContactSection = () => {
                     required: "Identity verification required",
                     minLength: { value: 3, message: "Minimum 3 characters" },
                   })}
-                  className="w-full p-3 rounded-lg bg-gray-900 border border-white/10 focus:border-primary/50 focus:ring-2 focus:ring-primary/20 transition-all"
+                  className="w-full p-3 rounded-lg bg-gray-900 border border-white/10 focus:border-primary/50 focus:ring-2 focus:ring-primary/20 transition-all max-w-full"
                 />
                 {errors.name && (
                   <span className="text-sm text-red-400 mt-1">
@@ -237,7 +237,7 @@ const ContactSection = () => {
               <Button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full gap-2 hover:shadow-lg hover:shadow-primary/10 transition-all"
+                className="w-full max-w-full gap-2 hover:shadow-lg hover:shadow-primary/10 transition-all truncate"
               >
                 {isSubmitting ? (
                   <>
