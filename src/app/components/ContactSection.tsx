@@ -71,9 +71,9 @@ const ContactSection = () => {
   return (
     <section 
       id="contact" 
-      className="min-h-screen relative py-20 px-4 bg-gradient-to-b from-[#0F172A] to-[#1E293B]"
+      className="min-h-screen relative py-20 px-4 sm:px-6 bg-gradient-to-b from-[#0F172A] to-[#1E293B]"
     >
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-auto w-full">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -85,19 +85,19 @@ const ContactSection = () => {
           <p className="text-gray-400">Let's build something extraordinary</p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-start">
+        <div className="grid md:grid-cols-2 gap-6 md:gap-12 items-start">
           {/* Contact Channels */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            className="space-y-6"
+            className="space-y-6 w-full max-w-[calc(100vw-2rem)]"
           >
             <div className="p-6 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm">
               <div className="flex items-center gap-4 mb-4">
                 <div className="p-3 rounded-lg bg-primary/10">
                   <Mail className="w-6 h-6 text-primary" />
                 </div>
-                <div>
+                <div className="truncate">
                   <h3 className="text-lg font-semibold text-gray-300">Email</h3>
                   <a
                     href="mailto:aasamsivasankarreddynani143@gmail.com"
@@ -126,7 +126,7 @@ const ContactSection = () => {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <Button
                 variant="outline"
                 className="gap-2 justify-start h-14"
@@ -163,7 +163,7 @@ const ContactSection = () => {
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             onSubmit={handleSubmit(onSubmit)}
-            className="p-8 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm"
+            className="p-4 sm:p-6 md:p-8 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm"
           >
             <input
               type="hidden"

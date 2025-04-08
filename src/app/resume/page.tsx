@@ -9,6 +9,9 @@ export default function Resume() {
   const resumeUrl = '/SIVA_SANKAR_REDDY_RESUME.pdf';
   const fileName = 'SIVA_SANKAR_REDDY_RESUME.pdf';
 
+  const main = "aasamsivasankarreddynani143@gmail.com";
+  const number = "+918688660794";
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <div className="max-w-6xl mx-auto px-4 sm:px-8 py-12">
@@ -23,13 +26,13 @@ export default function Resume() {
           </h1>
           <div className="flex justify-center gap-4 mt-4">
             <Button variant="outline" size="sm" asChild>
-              <a href="mailto:your.email@example.com">
+              <a href={`mailto:${main}`}>
                 <Mail className="w-4 h-4 mr-2" />
                 Email
               </a>
             </Button>
             <Button variant="outline" size="sm" asChild>
-              <a href="tel:+918688660794">
+              <a href={`tel:${number}`}>
                 <Phone className="w-4 h-4 mr-2" />
                 +91 868 866 0794
               </a>

@@ -37,13 +37,13 @@ export default function HeroSection() {
       {/* Animated Grid Pattern Overlay */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,_#80808012_1px,transparent_1px),linear-gradient(to_bottom,_#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
 
-      <div className="relative max-w-6xl px-4">
+      <div className="relative max-w-6xl px-4 max-sm:pt-20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight bg-clip-text text-white bg-gradient-to-r from-foreground to-foreground/70">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight bg-clip-text text-white bg-gradient-to-r from-foreground to-foreground/70">
             Hi, I'm <span className="text-primary">Siva Sankar</span>
           </h1>
           
