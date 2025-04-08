@@ -1,3 +1,5 @@
+/* eslint-disable react/no-unescaped-entities */
+
 'use client';
 
 import { Code, Cpu, Rocket } from 'lucide-react';

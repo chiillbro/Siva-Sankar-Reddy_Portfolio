@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
 // app/components/ExperienceSection.tsx
 'use client';
 

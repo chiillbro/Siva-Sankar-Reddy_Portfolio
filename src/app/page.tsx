@@ -5,14 +5,19 @@ import HeroSection from "./components/HeroSection";
 import Footer from "./components/Footer";
 import ErrorBoundary from "./components/ErrorBoundary";
 import SectionLayout from "./components/SectionLayout";
+import AboutSection from "./components/AboutSection";
+import ExperienceSection from "./components/ExperienceSection";
+import ProjectsSection from "./components/ProjectsSection";
+import SkillsSection from "./components/SkillsSection";
+import ContactSection from "./components/ContactSection";
 
 // Section configuration
 const SECTIONS = [
-  { Component: require("./components/AboutSection").default, id: "about" },
-  { Component: require("./components/ExperienceSection").default, id: "experience" },
-  { Component: require("./components/ProjectsSection").default, id: "projects" },
-  { Component: require("./components/SkillsSection").default, id: "skills" },
-  { Component: require("./components/ContactSection").default, id: "contact" },
+  { Component: AboutSection, id: "about" },
+  { Component: ExperienceSection, id: "experience" },
+  { Component: ProjectsSection, id: "projects" },
+  { Component: SkillsSection, id: "skills" },
+  { Component: ContactSection, id: "contact" },
 ];
 
 const SectionWrapper = ({ Component, id }: { Component: React.ComponentType; id: string }) => (
