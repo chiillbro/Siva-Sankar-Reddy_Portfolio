@@ -273,7 +273,7 @@
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { ArrowRight, Cpu, Code, Terminal } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 // Optional: Import a library for particle effects or use CSS
 // import Particles from 'react-tsparticles'; // Example if using ts-particles
 

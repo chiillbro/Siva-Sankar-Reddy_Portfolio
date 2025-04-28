@@ -213,7 +213,7 @@
 /* eslint-disable react/no-unescaped-entities */
 'use client';
 
-import { Download, Zap, CodeXml, BrainCircuit, GraduationCap, Rocket } from 'lucide-react'; // Different icons
+import { Zap, CodeXml, BrainCircuit, GraduationCap, Rocket } from 'lucide-react'; // Different icons
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator'; // Use Separator

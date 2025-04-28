@@ -253,7 +253,7 @@
 
 import { motion } from 'framer-motion';
 import { Code, Server, Database, Cloud, GitBranch, Construction, Palette, TestTubeDiagonal } from 'lucide-react';
-import { Badge } from '@/components/ui/badge';
+// import { Badge } from '@/components/ui/badge';
 import { cn } from '@/app/lib/utils';
 
 // --- Refined Skills Data with Proficiency/Focus ---
