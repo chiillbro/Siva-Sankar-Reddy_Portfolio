@@ -58,8 +58,8 @@
 //               animate={{ scale: 1 }}
 //               transition={{ duration: 0.5 }}
 //             >
-//               <Link 
-//                 href="/resume" 
+//               <Link
+//                 href="/resume"
 //                 className="flex items-center gap-2 px-8 py-3 bg-primary/80 text-white font-semibold rounded-md shadow hover:bg-primary transition"
 //               >
 //                 View Resume
@@ -92,11 +92,6 @@
 //     </section>
 //   );
 // }
-
-
-
-
-
 
 // ******************************************** Section 2 ***********************************************
 
@@ -201,101 +196,288 @@
 //   );
 // }
 
-
-
-
-
-
-
 // ************************************************ Version 3 ******************************************************* //
 
-// app/components/AboutSection.tsx
 /* eslint-disable react/no-unescaped-entities */
-'use client';
+// "use client";
 
-import { Zap, CodeXml, BrainCircuit, GraduationCap, Rocket } from 'lucide-react'; // Different icons
-import { motion } from 'framer-motion';
-import { Button } from '@/components/ui/button';
-import { Separator } from '@/components/ui/separator'; // Use Separator
-import Link from 'next/link';
+// import {
+//   Zap,
+//   CodeXml,
+//   BrainCircuit,
+//   GraduationCap,
+//   Rocket,
+// } from "lucide-react"; // Different icons
+// import { motion } from "framer-motion";
+// import { Button } from "@/components/ui/button";
+// import { Separator } from "@/components/ui/separator"; // Use Separator
+// import Link from "next/link";
+
+// const sectionVariants = {
+//   hidden: { opacity: 0 },
+//   visible: { opacity: 1, transition: { staggerChildren: 0.2 } },
+// };
+
+// const itemVariants = {
+//   hidden: { opacity: 0, y: 20 },
+//   visible: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 100 } },
+// };
+
+// export default function AboutSection() {
+//   return (
+//     <section
+//       id="about"
+//       className="w-full py-20 md:py-32 px-4 lg:px-8 bg-background" // Standard background
+//     >
+//       <motion.div
+//         className="max-w-4xl mx-auto" // Centered content
+//         initial="hidden"
+//         whileInView="visible"
+//         viewport={{ once: true, amount: 0.2 }}
+//         variants={sectionVariants}
+//       >
+//         {/* Section Title (Optional Subtitle) */}
+//         <motion.div
+//           variants={itemVariants}
+//           className="text-center mb-12 md:mb-16"
+//         >
+//           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-2">
+//             My Approach
+//           </h2>
+//           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+//             From optimizing backend performance to crafting intuitive
+//             interfaces, I focus on building robust and scalable solutions.
+//           </p>
+//         </motion.div>
+
+//         {/* Content Area */}
+//         <motion.div
+//           variants={itemVariants}
+//           className="space-y-8 text-base md:text-lg text-muted-foreground leading-relaxed"
+//         >
+//           <p>
+//             For me, software engineering is about the continuous pursuit of
+//             better solutions. I get a kick out of dissecting complex problems,
+//             whether it's architecting a real-time system on AWS Fargate,
+//             slashing API latency by{" "}
+//             <strong className="text-foreground">over 50%</strong> through
+//             multi-layer caching, or refactoring legacy code into maintainable
+//             modules. It's the challenge of translating requirements into clean,
+//             efficient, and testable code that drives me.
+//           </p>
+//           <Separator className="my-6 bg-border/50" />
+//           <p>
+//             My foundation is built on solid Computer Science principles
+//             (sharpened by{" "}
+//             <strong className="text-foreground">500+ DS&A problems</strong>) and
+//             hands-on experience across the stack –{" "}
+//             <strong className="text-foreground">React/Next.js</strong> on the
+//             frontend,{" "}
+//             <strong className="text-foreground">Node.js/NestJS</strong> (along
+//             with Python/Go) on the backend, and deploying containerized
+//             applications using{" "}
+//             <strong className="text-foreground">Docker & CI/CD</strong>. I enjoy
+//             the entire lifecycle, from initial design to deployment and beyond.
+//           </p>
+//           <Separator className="my-6 bg-border/50" />
+//           <p>
+//             I'm particularly interested in the intersection of efficient systems
+//             and intelligent features. Exploring how AI/ML can augment
+//             applications, like the context-aware chatbot and analytics
+//             integrations I worked on at Nirmaan, is an area I'm excited to delve
+//             deeper into. I'm actively looking for{" "}
+//             <strong className="text-foreground">SDE 1/2 roles</strong> where I
+//             can apply this blend of performance focus and innovative thinking
+//             within a product-driven environment.
+//           </p>
+
+//           {/* Stats Integrated Subtly (Optional Visuals) */}
+//           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-6 text-center">
+//             <motion.div variants={itemVariants} className="space-y-1">
+//               <Zap className="mx-auto h-6 w-6 text-primary" />
+//               <p className="text-xs text-muted-foreground">Performance Focus</p>
+//             </motion.div>
+//             <motion.div variants={itemVariants} className="space-y-1">
+//               <CodeXml className="mx-auto h-6 w-6 text-primary" />
+//               <p className="text-xs text-muted-foreground">Full-Stack Build</p>
+//             </motion.div>
+//             <motion.div variants={itemVariants} className="space-y-1">
+//               <BrainCircuit className="mx-auto h-6 w-6 text-primary" />
+//               <p className="text-xs text-muted-foreground">Problem Solving</p>
+//             </motion.div>
+//             <motion.div variants={itemVariants} className="space-y-1">
+//               <GraduationCap className="mx-auto h-6 w-6 text-primary" />
+//               <p className="text-xs text-muted-foreground">
+//                 B.Tech Robotics
+//               </p>{" "}
+//               {/* Update with correct degree */}
+//             </motion.div>
+//           </div>
+
+//           <motion.div variants={itemVariants} className="text-center pt-8">
+//             <Button asChild size="lg">
+//               <Link href="/resume">
+//                 View Resume
+//                 <Rocket className="w-4 h-4 transition-transform" />
+//               </Link>
+//             </Button>
+//           </motion.div>
+//         </motion.div>
+//       </motion.div>
+//     </section>
+//   );
+// }
+
+/* eslint-disable react/no-unescaped-entities */
+"use client";
+
+import {
+  Zap,
+  CodeXml,
+  BrainCircuit,
+  Rocket,
+  DatabaseZap,
+  Layers3,
+} from "lucide-react"; // Added DatabaseZap, Layers3
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
+import Link from "next/link";
+import { Badge } from "@/components/ui/badge"; // For skills highlight
 
 const sectionVariants = {
   hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { staggerChildren: 0.2 } },
+  visible: { opacity: 1, transition: { staggerChildren: 0.15, duration: 0.5 } },
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 100 } },
+  hidden: { opacity: 0, y: 25 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { type: "spring", stiffness: 90, damping: 13 },
+  },
 };
 
 export default function AboutSection() {
-
   return (
     <section
       id="about"
-      className="w-full py-20 md:py-32 px-4 lg:px-8 bg-background" // Standard background
+      className="w-full py-20 md:py-28 lg:py-32 px-4 bg-muted/30" // Slightly different background for contrast
     >
       <motion.div
-        className="max-w-4xl mx-auto" // Centered content
+        className="container mx-auto max-w-3xl" // Centered and constrained width for readability
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
         variants={sectionVariants}
       >
-        {/* Section Title (Optional Subtitle) */}
-        <motion.div variants={itemVariants} className="text-center mb-12 md:mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-2">
-              My Approach
-            </h2>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-                From optimizing backend performance to crafting intuitive interfaces, I focus on building robust and scalable solutions.
-            </p>
+        <motion.div
+          variants={itemVariants}
+          className="text-center mb-12 md:mb-16"
+        >
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground mb-3">
+            Crafting Intelligent Software
+          </h2>
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+            I bridge robust engineering with cutting-edge AI to build solutions
+            that are not only performant but also smart and intuitive.
+          </p>
         </motion.div>
 
-        {/* Content Area */}
-        <motion.div variants={itemVariants} className="space-y-8 text-base md:text-lg text-muted-foreground leading-relaxed">
-            <p>
-                For me, software engineering is about the continuous pursuit of better solutions. I get a kick out of dissecting complex problems, whether it's architecting a real-time system on AWS Fargate, slashing API latency by <strong className='text-foreground'>over 50%</strong> through multi-layer caching, or refactoring legacy code into maintainable modules. It's the challenge of translating requirements into clean, efficient, and testable code that drives me.
-            </p>
-             <Separator className='my-6 bg-border/50'/>
-            <p>
-                My foundation is built on solid Computer Science principles (sharpened by <strong className='text-foreground'>500+ DS&A problems</strong>) and hands-on experience across the stack – <strong className='text-foreground'>React/Next.js</strong> on the frontend, <strong className='text-foreground'>Node.js/NestJS</strong> (along with Python/Go) on the backend, and deploying containerized applications using <strong className='text-foreground'>Docker & CI/CD</strong>. I enjoy the entire lifecycle, from initial design to deployment and beyond.
-            </p>
-             <Separator className='my-6 bg-border/50'/>
-            <p>
-                I'm particularly interested in the intersection of efficient systems and intelligent features. Exploring how AI/ML can augment applications, like the context-aware chatbot and analytics integrations I worked on at Nirmaan, is an area I'm excited to delve deeper into. I'm actively looking for <strong className='text-foreground'>SDE 1/2 roles</strong> where I can apply this blend of performance focus and innovative thinking within a product-driven environment.
-            </p>
+        <motion.div
+          variants={itemVariants}
+          className="space-y-6 text-base md:text-lg text-foreground/80 leading-relaxed bg-card p-6 sm:p-8 rounded-xl shadow-lg"
+        >
+          <p>
+            My journey as a software engineer is fueled by a passion for
+            transforming complex challenges into elegant, high-impact solutions.
+            I thrive on the entire development lifecycle, from architecting{" "}
+            <strong className="text-primary font-semibold">
+              scalable backend systems
+            </strong>{" "}
+            (Node.js/NestJS, Python/FastAPI) and optimizing database
+            interactions (PostgreSQL/pgvector, MongoDB) to crafting{" "}
+            <strong className="text-primary font-semibold">
+              dynamic user interfaces
+            </strong>{" "}
+            with React/Next.js.
+          </p>
 
-            {/* Stats Integrated Subtly (Optional Visuals) */}
-            <div className='grid grid-cols-2 md:grid-cols-4 gap-4 pt-6 text-center'>
-                 <motion.div variants={itemVariants} className='space-y-1'>
-                     <Zap className='mx-auto h-6 w-6 text-primary'/>
-                     <p className='text-xs text-muted-foreground'>Performance Focus</p>
-                 </motion.div>
-                 <motion.div variants={itemVariants} className='space-y-1'>
-                     <CodeXml className='mx-auto h-6 w-6 text-primary'/>
-                     <p className='text-xs text-muted-foreground'>Full-Stack Build</p>
-                 </motion.div>
-                 <motion.div variants={itemVariants} className='space-y-1'>
-                     <BrainCircuit className='mx-auto h-6 w-6 text-primary'/>
-                     <p className='text-xs text-muted-foreground'>Problem Solving</p>
-                 </motion.div>
-                 <motion.div variants={itemVariants} className='space-y-1'>
-                     <GraduationCap className='mx-auto h-6 w-6 text-primary'/>
-                      <p className='text-xs text-muted-foreground'>B.Tech Robotics</p> {/* Update with correct degree */}
-                 </motion.div>
+          <p>
+            I've demonstrated a knack for significantly boosting application
+            performance—achieving over a{" "}
+            <strong className="text-foreground font-medium">
+              60% improvement
+            </strong>{" "}
+            through strategic caching—and have taken full ownership of
+            delivering critical features like real-time communication systems
+            and context-aware chatbots. My commitment to clean code and SOLID
+            principles is evident in my work refactoring legacy systems to
+            enhance maintainability.
+          </p>
+
+          <Separator className="my-6 bg-border/40" />
+
+          <p>
+            The current wave of{" "}
+            <strong className="text-primary font-semibold">
+              Generative AI
+            </strong>{" "}
+            has deeply captured my interest. I'm actively building applications
+            like{" "}
+            <strong className="text-foreground font-medium">DocuMentor</strong>,
+            a RAG-based Q&A assistant, leveraging LangChain, LLMs (via Ollama),
+            and vector databases. This hands-on experience is solidifying my
+            skills in applying AI to create tangible value. With a strong
+            foundation in Data Structures & Algorithms (
+            <strong className="text-foreground font-medium">
+              500+ LeetCode
+            </strong>
+            ) and a drive for continuous learning, I'm excited to bring
+            innovative solutions to a forward-thinking product company.
+          </p>
+
+          <div className="pt-4">
+            <h4 className="text-md font-semibold mb-2 text-foreground">
+              Key Technical Areas:
+            </h4>
+            <div className="flex flex-wrap gap-2">
+              {[
+                "GenAI (RAG, LangChain)",
+                "Full-Stack Web Dev",
+                "System Design",
+                "API Development",
+                "Cloud & DevOps",
+                "Database Optimization",
+                "DS & Algorithms",
+              ].map((skill) => (
+                <Badge
+                  key={skill}
+                  variant="secondary"
+                  className="text-sm font-normal"
+                >
+                  {skill}
+                </Badge>
+              ))}
             </div>
+          </div>
+        </motion.div>
 
-             <motion.div variants={itemVariants} className='text-center pt-8'>
-                <Button asChild size="lg">
-                <Link
-                href="/resume">
-                    View Resume
-                    <Rocket className="w-4 h-4 transition-transform" />
-                    </Link>
-                </Button>
-             </motion.div>
+        <motion.div
+          variants={itemVariants}
+          className="text-center mt-12 md:mt-16"
+        >
+          <Button
+            asChild
+            size="lg"
+            className="group text-base shadow-md hover:shadow-primary/30 transition-shadow"
+          >
+            <Link href="#contact">
+              Let's Connect{" "}
+              <Rocket className="ml-2 h-4 w-4 group-hover:rotate-[15deg] transition-transform" />
+            </Link>
+          </Button>
         </motion.div>
       </motion.div>
     </section>
