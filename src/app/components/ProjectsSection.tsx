@@ -312,7 +312,7 @@ const projects = [
     title: "DocuMentor – AI Document Q&A",
     description:
       "Full-stack GenAI application enabling users to upload PDFs and receive context-aware answers using a RAG pipeline. Deployed to cloud platforms.",
-    // imageUrl: "/images/documentor-screenshot.png", // Replace!
+    imageUrl: "/images/documentor-screenshot.png", // Replace!
     tags: [
       "Next.js",
       "TypeScript",
@@ -330,8 +330,8 @@ const projects = [
       "Render/Fly.io",
     ],
     githubUrl:
-      "https://github.com/siva-sankar-reddy-asam/DocuMentor-AI-Powered-Document-QA", // Replace!
-    // liveUrl: "https://documentor-ai-frontend.vercel.app/", // Replace!
+      "https://github.com/chiillbro/documentor-ai", // Replace!
+    liveUrl: "https://documentor-ai-two.vercel.app/", // Replace!
     keyFeatures: [
       "RAG pipeline for contextual Q&A on PDF content",
       "Streaming of LLM responses for real-time feel",
